@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1.What is the for-in loop in JavaScript? Give its syntax?</p>
+Ans:
+    <ul>
+        <li>There are also other types of loops. The for..in loop in JavaScript allows you to iterate over all property keys of an object.</li>
+        <li>for-in loop is a subsidiary of 'for loop' and it is used to iterate on the keys of an object/array</li>
+    </ul>
+    <pre>
+        function add(){
+            let a= 20;
+        }
+        add()
+    </pre>
+    <hr>
+<p>2.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in JavaScript?</p>
+Ans:
+<ul>
+<li>Local scope or block scope in JS means the variable declared within {}, if, switch, loops then it can only be accessed inside that block and not outside it.</li>
+        <li>Functional scope is name as local scope, the only difference is that the variable is defined inside a function.</li>
+        <li>Scope chain means the variables of the lexical parent can be accessed inside a block/function.</li>
+    </ul>
+
+    <pre>
+        var number  =10;
+        function cal() {
+           return number;
+        }
+        console.log(number)
+    </pre>
+
+<hr>
+<p>3.What is difference between null and undefined and where to use what?</p>
+Ans:
+<br><br>
+Null:
+<ul>
+    <li>null and undefined are primitive types</li>
+    <li>It is the keyword that programically empty </li>
+    <li>They can be used like other types, such as string.</li>
+</ul>
+undefined:
+<br>
+<ul>
+    <li>undefined means is the value doesnot given</li>
+    <li>In null the value has been set but it i empty</li>
+</ul>
+
+<hr>
+<p>4.what is Symbol?</p>
+<ul>
+    <li>symbol is the unique word </li>
+    <li>symbol is primetive data type.</li>
+    <li>it is introduced in Es6.</li>
+    <li> it is immutable that means that cannot be change.</li>
+    <li>it will given bollean values</li>
+</ul>
+<pre>
+    let x = Symbol("hello")
+    let y = Symbol("hello")
+    let result = (x==y)
+    console.log(result)
+</pre>
+<hr>
+<p>5.Write code to explain map and filter in arrays?</p>
+Map:
+<br>
+<ul>
+    <li>It takes one arugument that is callback function</li>
+    <li> callback function is executed for the number of elements in an array</li>
+    <li>Map is a function which is in build in function</li>
+    <li>It has both value and index</li>
+</ul>
+<pre>
+    let arr = [1,2,3,4]
+    let brr = arr.map((val,index)=>{
+        return val*2
+    })
+    console.log(brr)
+</pre>
+filter:
+<br>
+<ul>
+    <li>it is also similar to the map</li>
+    <li>But in filter it can filter in an array</li>
+    <li>There is also a value and index is availabe but suppose we can giving an array in that we are return the value is divided by 2</li>
+    <li>In given array they can only filter and  form array</li>
+</ul>
+<pre>
+    let arr = [1,2,3,5,4,6,8]
+
+    let result = arr.filter((val,index)=>{
+        
+        return (val%2 ===0) 
+
+    })
+    console.log(result)
+</pre>   
+<hr>
+<p>6.Explain passed by value and passed by reference?</p>
+Ans:
+<br>
+passed by value:
+<ul>
+    <li>Pass by value is primitive datatype.</li>
+    <li>Because premitive data types are starts with numbers,booleans,strings</li>
+    <li> The method parameter values are copied to another variable and then the copied object is passed, that's why it's called pass by value</li>
+   
+ </ul>
+<pre>
+         var a = 10; 
+        var b = a + 20;
+        console.log(b)
+    </pre>
+
+<br>
+passed by reference:
+<ul>
+    <li>pass by reference is the non-primitive data type.</li>
+    <li>Non-primitive data types are objects and arrays</li>
+    <li>An reference to the actual parameter is passed to the method, that's why it's called pass by reference.</li>
+   
+ </ul>
+ <pre>
+    let obj1 = {
+        name: "hello",
+        age: 22
+    }
+    obj1.age = 18
+    let obj2 ={
+        name : "hello",
+        age: 24
+    }
+    console.log(obj1)
+    console.log(obj2)
+</pre>
+<hr>
+    <p>7.Please explain Self Invoking Function and its code</p>
+    Ans: <ul>
+        <li>It is called annymous function</li>
+        <li>self invocking function is also clled as immediately invoked function and it has introduced in ES6 version.</li>
+        <li>It should be called just after its decalartion so that it doesnot pollutes the outer scope</li>
+        </ul>
+  <pre>
+            (function(){})()
+</pre>
+<script src="./index.js"></script>
+    </script>
+</body>
+</html>
+
+
+
+
+
+    
